@@ -1,6 +1,6 @@
 <script setup>
 const props = defineProps({
-  messages: Array
+  message: Object
 })
 const emit = defineEmits(['sendId'])
 function removeMessage(id){
@@ -9,7 +9,7 @@ function removeMessage(id){
 </script>
 
 <template>
-  <div class="message" v-for="message in messages" :key="message.id">
+  <div class="message">
     <button class="remove_btn" @click="removeMessage(message.id)">×</button>
     <p> {{ message.text }}</p>
   </div>
