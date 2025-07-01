@@ -59,6 +59,27 @@ onMounted(startShowingMessages);
   border-radius: 8px;
   border: 1px solid #e0e0e0;
   gap: 24px;
+  padding: 16px 8px;
+}
+@media (max-width: 768px) {
+  .chat {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .message-item .date {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chat {
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .message-item .date {
+    font-size: 10px;
+  }
 }
 
 </style>
