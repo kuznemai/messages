@@ -1,12 +1,11 @@
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-// import vueDevTools from 'vite-plugin-vue-devtools' // пока не включаем
 
 export default defineConfig({
+  base: '/messages/',
   plugins: [
     vue(),
-    // vueDevTools(),
   ],
   resolve: {
     alias: {
