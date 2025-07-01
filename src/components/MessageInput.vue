@@ -67,18 +67,20 @@ function addMessage() {
   }
 
   .message-input input {
-    width: 90%;
+    width: 100%;
+    height: 40px;
     padding: 0 12px;
     box-sizing: border-box;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 40px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
   }
-
   .message-input button {
-    width: 90%;
+    width: 100%;
     height: 40px;
     font-size: 14px;
   }
-
 }
 </style>

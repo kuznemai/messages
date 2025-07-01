@@ -10,56 +10,67 @@ function removeMessage(id){
 
 <template>
   <div class="message">
-    <button class="remove_btn" @click="removeMessage(message.id)">×</button>
-    <p> {{ message.text }}</p>
+    <div class="left">
+      <button class="remove_btn" @click="removeMessage(message.id)">×</button>
+    </div>
+    <div class="right">
+      <p>{{ message.text }}</p>
+    </div>
   </div>
 </template>
 
 <style scoped>
 .message {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-  width: 601px;
-  height: 72px;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  max-width: 601px;
+  padding: 10px;
   background-color: #E4F0ED;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.left {
+  flex-shrink: 0;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.remove_btn {
+  width: 24px;
+  height: 24px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  background: none;
   border: none;
+  color: #333;
+  cursor: pointer;
 }
-.remove_btn{
-  width: 20px;
-  height: 20px;
-  margin-left: 6px;
-}
-@media (max-width: 768px) {
+
+/* Адаптив под мобильные */
+@media (max-width: 480px) {
   .message {
-    width: 100%;
-    height: 60px;
-    font-size: 14px;
+    gap: 10px;
+    padding: 8px;
   }
+
   .remove_btn {
     width: 22px;
     height: 22px;
-    font-size: 12px;
+    font-size: 16px;
   }
-}
 
-
-@media (max-width: 480px) {
-  .message {
-    width: 100%;
-    height: auto;
-    padding: 8px 12px;
-    font-size: 14px;
-  }
-  .remove_btn {
-    width: 20px;
-    height: 20px;
-    font-size: 12px;
-  }
-  p {
-    flex: 1 1 100%;
+  .right p {
     margin: 0;
+    font-size: 14px;
   }
 }
 </style>

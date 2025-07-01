@@ -58,6 +58,7 @@ function formatDate(date) {
 
 .message-item .text {
   flex: 1;
+  color: #000000;
 }
 
 .message-item .date {
