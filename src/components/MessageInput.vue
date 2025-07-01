@@ -1,20 +1,31 @@
 <script setup>
+import { computed, ref } from "vue";
+const emit = defineEmits(["sendMessage"]);
 
-import {ref} from "vue";
-const emit = defineEmits(['sendMessage'])
+const newMessage = ref("");
+const isDisabled = computed(() => {
+  if (newMessage.value.trim().length < 1) {
+    return true;
+  }
+  return false;
+});
 
-const newMessage = ref('')
 function addMessage() {
-  if (newMessage.value.trim() === '') return
-  emit('sendMessage', newMessage.value.trim())
-  newMessage.value = ''
+  emit("sendMessage", newMessage.value.trim());
+  newMessage.value = "";
 }
 </script>
 
 <template>
   <form class="message-input" @submit.prevent="addMessage">
     <input v-model="newMessage" type="text" placeholder="Введите сообщение…" />
-    <button type="submit">ОТПРАВИТЬ</button>
+    <button
+      type="submit"
+      :class="{ disabled: isDisabled }"
+      :disabled="isDisabled"
+    >
+      ОТПРАВИТЬ
+    </button>
   </form>
 </template>
 
@@ -30,13 +41,13 @@ function addMessage() {
   height: 40px;
   padding: 0 12px;
   border-radius: 8px;
-  border: 1px solid #DEE2E8;
+  border: 1px solid #dee2e8;
   font-size: 14px;
 }
 
 .message-input button {
   width: 120px;
-  background: linear-gradient(180deg, #04694B 0%, #11A87B 100%);
+  background: linear-gradient(180deg, #04694b 0%, #11a87b 100%);
   border: none;
   border-radius: 8px;
   color: white;
@@ -49,7 +60,10 @@ function addMessage() {
 .message-input button:hover {
   background: linear-gradient(180deg, #035b3b 0%, #0f8a58 100%);
 }
-
+.message-input button.disabled {
+  cursor: default;
+  background: linear-gradient(180deg, #676767 0%, #858686 100%);
+}
 @media (max-width: 768px) {
   .message-input {
     width: 100%;

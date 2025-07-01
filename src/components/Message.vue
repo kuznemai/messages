@@ -1,10 +1,10 @@
 <script setup>
 const props = defineProps({
-  message: Object
-})
-const emit = defineEmits(['sendId'])
-function removeMessage(id){
-  emit('sendId', id)
+  message: Object,
+});
+const emit = defineEmits(["sendId"]);
+function removeMessage(id) {
+  emit("sendId", id);
 }
 </script>
 
@@ -22,12 +22,12 @@ function removeMessage(id){
 <style scoped>
 .message {
   display: flex;
-  align-items: flex-start;
+  align-items: center; /* выравнивание по вертикали */
   gap: 12px;
   width: 100%;
   max-width: 601px;
   padding: 10px;
-  background-color: #E4F0ED;
+  background-color: #e4f0ed;
   border-radius: 8px;
   box-sizing: border-box;
 }
@@ -38,8 +38,13 @@ function removeMessage(id){
 
 .right {
   display: flex;
-  flex-direction: column;
   flex: 1;
+  color: #000000;
+  align-items: center;
+}
+.right > p {
+  margin: 0;
+  color: #000000;
 }
 
 .remove_btn {
@@ -53,9 +58,9 @@ function removeMessage(id){
   border: none;
   color: #333;
   cursor: pointer;
+  padding: 0;
 }
 
-/* Адаптив под мобильные */
 @media (max-width: 480px) {
   .message {
     gap: 10px;
@@ -69,7 +74,6 @@ function removeMessage(id){
   }
 
   .right p {
-    margin: 0;
     font-size: 14px;
   }
 }

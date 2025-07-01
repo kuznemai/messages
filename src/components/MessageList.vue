@@ -1,12 +1,16 @@
 <script setup>
 const props = defineProps({
-  messages: Array
-})
+  messages: Array,
+});
 function formatDate(date) {
-  return new Date(date).toLocaleString('ru-RU', {
-    day: '2-digit', month: '2-digit', year: 'numeric',
-    hour: '2-digit', minute: '2-digit', second: '2-digit'
-  })
+  return new Date(date).toLocaleString("ru-RU", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+  });
 }
 </script>
 
@@ -28,7 +32,7 @@ function formatDate(date) {
   height: 307px;
   overflow-y: auto;
   padding: 16px;
-  background-color: #F6F8FA;
+  background-color: #f6f8fa;
   border-radius: 6px;
   font-size: 14px;
   box-sizing: border-box;
@@ -67,7 +71,6 @@ function formatDate(date) {
   white-space: nowrap;
 }
 
-
 @media (max-width: 768px) {
   .message-list {
     width: 100%;
@@ -92,5 +95,4 @@ function formatDate(date) {
     font-size: 10px;
   }
 }
-
 </style>
