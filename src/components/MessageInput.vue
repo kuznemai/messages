@@ -49,4 +49,36 @@ function addMessage() {
 .message-input button:hover {
   background: linear-gradient(180deg, #035b3b 0%, #0f8a58 100%);
 }
+
+@media (max-width: 768px) {
+  .message-input {
+    width: 100%;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .message-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .message-input input {
+    width: 90%;
+    padding: 0 12px;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 40px;
+  }
+
+  .message-input button {
+    width: 90%;
+    height: 40px;
+    font-size: 14px;
+  }
+
+}
 </style>
