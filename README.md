@@ -1,29 +1,30 @@
-# messages
+# 🧪 Тестовое задание — Frontend (Vue 3)
 
-This template should help get you started developing with Vue 3 in Vite.
+## 📄 Описание
 
-## Recommended IDE Setup
+Реализация пользовательского интерфейса по макету из Figma.  
+Вёрстка выполнена с использованием современного стека (Vue 3 + Vite + Tailwind), адаптирована под разные экраны, организована компонентно.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- 📘 [Техническое задание (PDF)](https://vk.com/doc49407956_687955562?hash=gMspB0Edx2MUjeZqvq92SLlpIPwqYXiEFUzPvzlKf7o&dl=SmprPK3V7ErpDdenKd01YLvzdPNK1dCHXwN4kREgOV0)
+- 🎨 [Макет в Figma](https://www.figma.com/design/VrRfdriAVCqXLW2SYtbBb6/%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5?node-id=1-387&t=SjF8d2TaVkD8pzKP-0)
 
-## Customize configuration
+---
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## 🚀 Стек технологий
 
-## Project Setup
+- **Vue 3** (Composition API)
+- **Vite**
+- **TypeScript**
+- **Tailwind CSS**
+- **Pinia** (если требуется)
+- **Figma** (для соответствия дизайну)
 
-```sh
+---
+
+## ⚙️ Установка и запуск
+
+```bash
+git clone https://github.com/yourusername/test-task.git
+cd test-task
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```

@@ -22,7 +22,7 @@ function removeMessage(id) {
 <style scoped>
 .message {
   display: flex;
-  align-items: center; /* выравнивание по вертикали */
+  align-items: center;
   gap: 12px;
   width: 100%;
   max-width: 601px;
